@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>CSS</title>
+    <script>
+        $(document).ready(function(){
+           
+            wow = new WOW(
+                  {
+                  boxClass:     'wow',      // default
+                  animateClass: 'animate__animated', // default
+                  offset:       0,          // default
+                  mobile:       true,       // default
+                  live:         true        // default
+                }
+                )
+                wow.init();
+        })
+    </script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-decoration: none;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background: #333;
+        color: white;
+        line-height: 1,6;
+        height: 100vh;
+
+    }
+    #header{
+      background:linear-gradient(90deg,#f24242,#252523,#717171);
+    
+      font-size: 19px;
+      display: flex;
+      justify-content: space-between;
+      line-height: 5em;
+      height: 5em;
+   }
+   .logo{
+       font-size: 20px;
+       padding-left: 30px;
+       margin-top: 20px;
+       float: right;
+   }
+   
+   .find{
+       position:absolute;
+       left : 180px ;
+       top : 10px;
+       
+   }
+   .round{
+    border-radius: 15px;
+    padding: 10px;  
+    width: 200px;
+   }
+  
+   .menu{
+       display: flex;
+       
+   }
+   .menu li{
+       padding-right: 60px;
+    
+   }
+   .menu li a {
+    color: #23a6d5;
+   }
+   .menu li a:hover{
+       color:tomato;
+       transition: 1s;
+   }
+   section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+   }
+   section h1{
+    font-size: 4rem;
+   }
+   section p{
+       font-size: 1,5rem;
+   }
+   @keyframes doimau {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position:  right;
+  }
+  100% {
+    background-position: left;
+  }
+} 
+   .main {
+    width: 40%;
+    
+    background: rgba(0,0,0,.7);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform:translate(-50%,-50%);   
+}
+section.home h1{
+    position:absolute;
+    top:30%;
+}
+section.home{
+    background-image: linear-gradient(-45deg, #009472, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+  animation: doimau 10s ease infinite;
+}
+section.about1{
+    background:linear-gradient(#333,black,green);
+
+}
+footer{
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+.foot{
+    display: flex;
+}
+.foot>div:nth-child(1){
+ margin: 7px;
+    width: 50%;
+}
+.foot>div:nth-child(2){
+   
+    width: 20%;
+}
+.foot>div:nth-child(3){
+   
+    width: 20%;
+}
+</style>
+<body>
+    <div id="header">
+        <a href="#" class="logo">
+            <img src="logo.png"width="140px"height="100px">
+        </a>       
+        <a href="#" class="find">
+         <input type = "text" placeholder="Search your music here..." class="round">
+        </a>
+        <ul class="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="topmusic.html">Top music</a></li>
+            <li class="menu_list">
+                <a href="product.html">Product</a>
+             </li>
+            <li><a href="about us.html">About us</a></li>
+        </ul>
+     </div>
+     <section class="home">
+         <h1>Welcome</h1>
+         <div class="than">
+            <div class="wow animate__fadeIn main">
+               
+                <p>Mục đích của chúng tôi khi tạo ra trang web này để học tập, mọi nguồn tài nguyên đến từ Youtube</p>
+                <p>
+                  Chúng tôi là một công ty âm nhạc hàng đầu thế giới .Chúng tôi tạo ra trang web này nhằm mang lại những bài hát hay trên toàn thế giới cho mọi người cùng nghe và thưởng thức.Công ty chúng tôi có rất nhiều thành viên và mỗi thành viên luôn chăm chỉ và siêng năng để cho website ngày càng phát triển và không bị thụt lùi so với thời đại.Chúng tôi mong rằng ngày càng nhiều người biết đến chúng tôi hơn.
+                Xin chân thành cảm ơn tất cả những đóng góp của các bạn chúc các bạn nghe nhạc vui vẻ. Nếu như có thắc mắc hoặc sai sót xin liên lạc qua đường dây sau:
+                </p>
+               
+                <p>Facebook: <a href="https://www.facebook.com/pham.a.phat/">Phạm Anh Phát</a></p>
+            </div>
+            </div>
+     </section>
+     <section class="about1">
+        <h1>Phạm Anh Phát</h1>
+        <div class="wow animate__fadeInLeft hinhanh" data-wow-offset="10">
+            <img  width="400" height="400" src="https://scontent.fsgn5-6.fna.fbcdn.net/v/t1.6435-9/125469968_3408734272684550_774343421241695156_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=k8Ye4nCisLAAX_cDRU9&_nc_ht=scontent.fsgn5-6.fna&oh=b5031af933eea7351e39d1e568a5354f&oe=616C58A6" alt="">
+        </div>
+        <div class="wow animate__fadeInLeft introduce" data-wow-offset="10">
+        <p>Phạm Anh Phát</p>
+        <br>
+        <p>Là một lập trình viên của tập đoàn CEO có nhiều năm kinh nghiệm trong việc thiết kế Web  </p>
+        <br>
+        <p>Đã đạt được nhiều thành tựu trong lĩnh vực Công nghệ thông tin : C++   Python  Javascript  C</p>
+        <br>
+        <p>" No pain - No Gain"</p>
+        </div>
+    </section>
+    <section class="about2">
+        <h1>Trịnh Quang Lộc</h1>
+        <div class="wow animate__fadeInRight hinhanh2" data-wow-delay="0.2s">
+            <img width="400" height="400" src="https://scontent.fhan5-2.fna.fbcdn.net/v/t1.6435-9/133876704_1364912377181340_8284253301227341414_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=e3f864&_nc_ohc=W-rowrkmTGMAX_kTK_v&tn=IAr33GHOAEn_g7o6&_nc_ht=scontent.fhan5-2.fna&oh=aa36adddcdc1bf823f758da8e19d7cd9&oe=616A1625" alt="">
+        </div>
+        <div class="wow animate__fadeInRight introduce" data-wow-delay="0.2s">
+            <p>Trịnh Quang Lộc</p>
+            <br>
+            <p>Cũng là một thành viên trong công ty CEO thành lập nên trang Web này và có những đóng góp to lớn cho công ty</p>
+            <br>
+            <p>Anh đã nhận nhiều giải thưởng trong chuyên môn của mình: Đào tạo Web Logicstic ...</p>
+            <br>
+            <p>"Đừng bao giờ chán nản - Hãy bước lên bằng đôi chân của mình"</p>
+        </div>
+    </section>
+    <footer class="foot">
+        <div class="child1">
+        <div>Trường đại học Mở TPHCM - Địa chỉ: 371 Nguyễn Kiệm quận Gò Vấp thành phố Hồ Chí Minh</div>
+        <div>Email: sieucapvippro@gmail.com.vn -Người quản lý thông tin : Nguyễn Thiện Lạc</div>
+        <div>Chúc các bạn một ngày nghe nhạc thật vui vẻ</div>
+        </div>
+        <div class="child2">Hãy liên với chúng tôi tại đây
+           <div class="face"> 
+               <img width="50" height="50" src="images/icons8-facebook-64.png" alt="">
+          </div>
+          </div>
+        <div class="child3">Nhà tài trợ
+            <div><a href="#">MuCabang.com</a></div>
+            <div><a href="#">Nupakachi.com</a></div>
+            <div><a href="#">Lyrics.com</a></div>
+        </div>
+    </footer>
+</body>
+</html>

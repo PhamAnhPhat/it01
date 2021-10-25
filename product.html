@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>      
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+      <script src="jquery-3.6.0.min.js"></script>
+        <title>Product</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    </head>
+
+<script>
+  $(document).ready(function(){
+    $("div.items>div.item:nth-child(1)").addClass("wow animate__fadeInLeft")
+    $("div.items>div.item:nth-child(2)").addClass("wow animate__fadeInLeft")
+    $("div.items>div.item:nth-child(3)").addClass("wow animate__fadeInLeft")
+    $("div.items>div.item:nth-child(4)").addClass("wow animate__fadeInLeft")
+    $("div.items>div.item:nth-child(5)").addClass("wow animate__fadeInRight")
+    $("div.items>div.item:nth-child(6)").addClass("wow animate__fadeInRight")
+    $("div.items>div.item:nth-child(7)").addClass("wow animate__fadeInRight")
+    $("div.items>div.item:nth-child(8)").addClass("wow animate__fadeInRight")
+    $("div.listcontent>h1").addClass("wow animate__fadeIn")
+    wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animate__animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+  })
+</script>
+    <style>
+      html {
+	scroll-behavior: smooth;
+}
+        body
+   {
+     background:#192536;
+     background-size: cover;
+     color: white;
+   }
+    *{
+        text-decoration: none !important;
+        list-style: none;
+        margin: 0px ;
+        padding: 0px;
+        box-sizing: border-box;
+      
+    }
+    #header{
+      background:#0ed8a6 ;
+      font-family: sans-serif;
+      font-size: 19px;
+      display: flex;
+      justify-content: space-between;
+      line-height: 5em;
+      height: 5em;
+    
+
+   }
+   .logo{
+       font-size: 20px;
+       padding-left: 30px;
+       margin-top: 20px;
+       float: right;
+      
+   }
+   
+   .find{
+       position:absolute;
+       left : 180px ;
+       top : 10px;
+   }
+
+   .menu{
+       display: flex;
+   }
+   .menu li{
+       padding-right: 60px;
+   }
+   .menu li a:hover{
+       color:tomato;
+       transition: 1s;
+   }
+  
+
+   .content{
+       width: 55%;
+       height: 30%;
+       margin: auto;
+   }
+
+div.picture{
+ margin-left: 200px;
+ 
+}
+div.item{
+  
+    width: 20%;
+    height: 20%;
+    margin: 0.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px 10px 10px 10px;
+  height: 400px;
+     
+  position: relative;
+   overflow: hidden;
+    
+}
+div.item img{
+    width: 100%;
+  
+}
+
+div.item>h2{
+    text-align: center;
+}
+div.item ul li{
+    margin-left:10%;
+    padding: 2%;
+}
+div.items{
+    display: flex;
+    flex-wrap: wrap;
+    width: 87%;
+}
+img.imgg{
+    display: block;
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+    height: 300px;
+}
+
+ .overlay{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 10px 10px;
+    background: rgba(136, 75, 90, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+   
+}
+div.overlay:hover{
+    opacity: 1;
+    
+}
+div.img_btn{
+    cursor: pointer;
+    margin: 5px;
+    width: 40px;
+    height: 40px;  
+}
+.footer{
+  width: 100%;
+  padding: 10px 0 10px;
+  background:rgba(0, 0, 0, 0.5);
+}
+.footer  ul li{
+  margin-left: 300px;
+}
+div.info{
+  position: absolute;
+    left: 20px;
+    right: 0;
+    height: 47px;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    
+}
+div.right{
+          position:absolute;
+          right: 20px;
+         top:352px;
+         background: #192536;
+          border: 3px solid black;
+          width: 20%;
+          
+        }
+div.right p{
+  text-align: center;
+  
+}
+div.right iframe{
+  display: flex;
+  margin-top: 5px;
+}
+p.theloai{
+  font-size: 30px;
+  margin-left: 500px;
+  
+}
+ul.stop{
+  display: flex;
+  text-decoration: none ;
+}
+.face{
+  cursor: pointer;
+}
+.nono{
+  position: absolute;
+  right: 265px;
+}
+ul.tab{
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   
+ }
+ ul.tab li a{
+   display: block;
+   text-decoration: none;
+   
+   color: white;
+   padding: 15px 20px;
+   min-width: 120px;
+   text-align: center;
+   margin-right: 10px;
+ }
+ .active{
+ 
+ width: 70%;
+}
+.listcontent h1{
+ margin: 0;
+padding: 20px 8px;
+}
+.listcontent div{
+ display: flex;
+ margin: 5px;
+ padding: 0;
+}
+#tab1 p{
+ font-size: 25px;
+
+}
+#tab1 img{
+ margin-right: 10px;
+ border-radius: 10px 10px 10px 10px;
+}
+#tab2 p{
+ font-size: 25px;
+
+}
+#tab2 img{
+ margin-right: 10px;
+ border-radius: 10px 10px 10px 10px;
+}
+#tab3 p{
+ font-size: 25px;
+
+}
+#tab3 img{
+ margin-right: 10px;
+ border-radius: 10px 10px 10px 10px;
+}
+.upfooter{
+  text-align: center;
+  font-size: 30px;
+}
+.input{
+  position: absolute;
+  top: 40px;
+  left: 190px;
+  line-height: 40px;
+  overflow: auto;
+
+
+}
+input{
+  border: 2px solid black;
+  border-radius: 10px 10px 10px 10px;
+   width: 214px;
+   height: 40px;
+}
+div.input input[type="text"]{
+  font-size: 15px;
+}
+ul.tab li{
+  width:33%;
+  margin-left: 5px;
+ padding: 0;
+ background:linear-gradient(45deg,yellow,red);
+ border-radius: 5px 5px 5px 5px;
+ text-align: center;
+}
+ul.tab li a:nth-child(1){
+  margin-left: 50px;
+}
+    </style>
+     <script>
+      $(document).ready(function()  {
+       
+        $(".listcontent h1:not(:first-child)").hide()
+         //xy ly tab
+        $("ul.tab a").click(function() {
+          $("ul.tab a").removeClass("active")
+          $(this).addClass("active")
+          //xy ly content
+          var tab=$(this).attr("href")
+          $(".listcontent h1").hide()
+          $(tab).show()
+        })
+      })
+    </script>
+   <body>
+    <div id="header">
+       <a href="#" class="logo"><img src="logo.png"width="140px"height="100px"> </a>       
+       <div class="input">
+         <input  type="text" placeholder="Search your music here...">
+       </div>
+        <nav >
+             <ul class="menu">
+           <li><a href="home.html">Home</a></li>
+           <li><a href="topmusic.html">Top music</a></li>
+           <li >
+               <a href="product.html">Product</a>
+            </li>
+           <li><a href="about us.html">About us</a></li>
+            </ul>
+        </nav>
+    </div>
+   <section class="content">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+    
+       
+      
+        <!-- The slideshow -->
+        <div class="carousel-inner" >
+          <div class="carousel-item active picture"   >
+            <img src="images/stay.png"  width="447px" height="252px" alt="justin bieber">
+          </div>
+          <div class="carousel-item picture">
+            <img src="images/rise.png"  width="447px" height="252px"  alt="LOL">
+          </div>
+          <div class="carousel-item picture">
+            <img src="images/frozen.jpg"  width="447px" height="252px" alt="MTP">
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      
+</div>
+</section> 
+<p class="theloai">Thể Loại</p>
+    <section>
+        <div class="items">
+              
+              <div class="item">
+                <img class="imgg" src="images/denvau.jpg"  >
+                <div class="info">Nhạc VPop</div>
+                <div class="overlay">  
+                
+                  <div class="img_btn"><img src="images/previous.png" id="pre" onclick="previous_song()"></div> 
+                   <div class="img_btn"><img src="images/play-button1.png" id="play" onclick="justplay()" ></div>
+                   <div class="img_btn"><img src="images/next.png" id="next" onclick="next_song()"></div>
+                  </div>
+               
+           
+          </div>               
+            <div  class="item" >
+                
+                <img class="imgg" src="images/justin-bieber.jpg"  ><div class="info">Nhạc Âu Mỹ</div>
+               <div class="overlay">   
+               <div class="img_btn"><img src="images/previous.png" id="pre2" onclick="previous_song2()"></div> 
+                <div class="img_btn"><img src="images/play-button1.png" id="play2" onclick="justplay2()" ></div>
+                <div class="img_btn"><img src="images/next.png" id="next2" onclick="next_song2()"></div>
+               </div>
+              
+            </div>   
+               
+            <div  class="item" >
+                
+              <img class="imgg" src="images/dentrang.jpg"  ><div class="info">Nhạc KPop</div>
+             <div class="overlay">   
+             <div class="img_btn"><img src="images/previous.png" id="pre3" onclick="previous_song3()"></div> 
+              <div class="img_btn"><img src="images/play-button1.png" id="play3" onclick="justplay3()" ></div>
+              <div class="img_btn"><img src="images/next.png" id="next3" onclick="next_song3()"></div>
+             </div>
+            
+          </div>   
+          <div  class="item" >
+                
+            <img class="imgg" src="images/paymax1.jpg"  ><div class="info">Nhạc Disney</div>
+           <div class="overlay">   
+           <div class="img_btn"><img src="images/previous.png" id="pre4" onclick="previous_song4()"></div> 
+            <div class="img_btn"><img src="images/play-button1.png" id="play4" onclick="justplay4()" ></div>
+            <div class="img_btn"><img src="images/next.png" id="next4" onclick="next_song4()"></div>
+           </div>
+          
+        </div>   
+        <div  class="item" >
+                
+          <img class="imgg" src="images/LOL.jpg"  ><div class="info">Nhạc Game</div>
+         <div class="overlay">   
+         <div class="img_btn"><img src="images/previous.png" id="pre5" onclick="previous_song5()"></div> 
+          <div class="img_btn"><img src="images/play-button1.png" id="play5" onclick="justplay5()" ></div>
+          <div class="img_btn"><img src="images/next.png" id="next5" onclick="next_song5()"></div>
+         </div>
+        
+      </div>  
+      <div  class="item" >
+                
+        <img class="imgg" src="images/moon.jpg"  ><div class="info">Nhạc Nhật Bản</div>
+       <div class="overlay">   
+       <div class="img_btn"><img src="images/previous.png" id="pre6" onclick="previous_song6()"></div> 
+        <div class="img_btn"><img src="images/play-button1.png" id="play6" onclick="justplay6()" ></div>
+        <div class="img_btn"><img src="images/next.png" id="next6" onclick="next_song6()"></div>
+       </div>
+      
+    </div>  
+    <div  class="item" >
+                
+      <img class="imgg" src="images/xanhluc.jpg"  ><div class="info">Nhạc Trung</div>
+     <div class="overlay">   
+     <div class="img_btn"><img src="images/previous.png" id="pre7" onclick="previous_song7()"></div> 
+      <div class="img_btn"><img src="images/play-button1.png" id="play7" onclick="justplay7()" ></div>
+      <div class="img_btn"><img src="images/next.png" id="next7" onclick="next_song7()"></div>
+     </div>
+    
+  </div>  
+  <div  class="item" >
+                
+    <img class="imgg" src="images/friends.png"  ><div class="info">Nhạc EDM</div>
+   <div class="overlay">   
+   <div class="img_btn"><img src="images/previous.png" id="pre8" onclick="previous_song8()"></div> 
+    <div class="img_btn"><img src="images/play-button1.png" id="play8" onclick="justplay8()" ></div>
+    <div class="img_btn"><img src="images/next.png" id="next8" onclick="next_song8()"></div>
+   </div>
+  
+</div>  
+        </div>
+       
+    </section>
+    <div class="right">
+      <p>Những bài hát đặc sắc về trước</p>
+      <iframe  height="250" src="https://www.youtube.com/embed/6KH8eqKlohA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe  height="250" src="https://www.youtube.com/embed/LSStRMF17EY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe  height="250" src="https://www.youtube.com/embed/kRdqTNhHulw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="upfooter">Những nghệ sĩ - Nhóm nhạc nổi bật </div>
+    <section>
+      <ul class="tab">
+        <li><a href="#tab1" class="active">Việt Nam</a></li>
+        <li><a href="#tab2">Âu Mỹ</a></li>
+        <li><a href="#tab3">Hàn Quốc</a></li>
+      
+      </ul>
+      <div class="listcontent active">
+        <h1 id="tab1">
+          <div ><img width="250" height="250" src="images/noinaycoanh.png" >
+        
+          <p>Sơn Tùng-MTP <br> Anh đã bắt đầu sự nghiệp từ 2012 đến nay đã có nhiều thành công trên con đường của mình<br>Những bài hát hot hiện nay: <br>
+             1.Muộn rồi mà sao còn(4/2021) <br>
+             2.Chúng ta của hiện tại(12/2020) <br>
+             3.Hãy trao cho anh (7/2019)<br>
+          </p>
+      
+        </div>
+        <div><img width="250" height="250" src="images/jack.jpg" >
+         <p>Jack -Trịnh Trần Phương Tuấn <br>
+        Anh từng bước đi lên nhờ 2 bài hát đầu tay cực kì nổi tiếng của anh đó là "Hồng Nhan"&"Bạc Phận"<br>
+          Những bài hát hot hiện tại: <br>
+          1.LAYLALAY(5/2021) <br>
+          2.Hoa Hải Đường (9/2020) <br>
+          3.Hồng Nhan- Bạc Phận (2/2019) <br>          
+      </p>
+        
+         
+        </div>
+        <div><img width="250" height="250" src="images/mytam.jpg" >
+         
+         <p>Mỹ Tâm <br>
+          Cô có khiếu âm nhạc từ nhỏ và bắt đầu khởi nghiệp từ năm 2000, cô còn được biết đến với cái tên " Nữ hoàng V-Pop" <br>
+          Những bài hát nổi tiếng của cô: <br>
+          1.Hào Quang (5/2021) <br>
+          2.Anh chưa biết đâu (1/2021) <br>
+          3.Anh đợi em được không (9/2020) <br>
+        </p>
+         
+        </div>
+        
+        </h1>
+        <h1 id="tab2">
+          <div><img width="250" height="250" src="images/taylor.jpg" >
+          <p>Taylor Swift <br>
+            Những ca khúc của cô bắt nguồn từ những trải nghiệm cá nhân của chính bản thân cô để sáng tác , cô cũng đã nhận được nhiều giải thưởng nổi tiếng trên thế giới. Sau đây là những ca khúc hot của cô: <br>
+            1.Look What You Made Me Do (8/2017)
+            <br>
+            2.Shake It Off(8/2014)
+            <br>
+            3.You Belong With Me(6/2009)
+          </p>
+         </div>
+
+         
+         <div><img width="250" height="250" src="images/huyenthoai.jpg" >
+        <p>
+          Michael Jackson <br>
+          Michael Joseph Jackson là một nam ca sĩ, nhạc sĩ, vũ công người Mỹ.Được mệnh danh là "Ông hoàng nhạc pop", ông được coi là một biểu tượng đại chúng quan trọng của thế kỷ 20 <br>
+          1.Heal The World (10/2009)
+          <br>
+          2.You Are Not Alone(10/2009)
+          <br>
+          3.Earth Song (10/2009)
+        </p>
+        </p></div>
+          
+         
+             
+         <div><img width="250" height="250" src="images/dragon.jpg" >
+        <p>Dan reynolds <br>
+          Anh là giọng ca chính và là thành viên ban đầu duy nhất còn lại của ban nhạc pop rock Imagine Dragons <br>
+          1.Believer (3/2017)
+          <br>
+          2.Natural (8/2018)
+          <br>
+          3.Thunder (5/2017)
+        </p></div>
+          
+         
+                
+        </h1>
+        <h1 id="tab3">
+          <div><img width="250" height="250" src="images/IU.jpg" >
+          <p>IU-Lee Ji-eun <br>
+            Cái tên IU là sự kết hợp giữa 'I' và 'you' có nghĩa là "bạn và tôi hòa hợp với nhau thông qua âm nhạc.Cô là một ca sĩ khi chỉ mới 15 tuổi với album " Lost and Found"<br>
+            1.Celebrity(2/2021)
+          <br>
+          2.BBIBBI(삐삐)(10/2018)
+          <br>
+          3.Blueming(블루밍)(11/2019)
+        </p> 
+          </div>
+
+          <div><img width="250" height="250" src="images/izone.jpg" >
+          <p>I*ZONE <br>
+            Là một nhóm nhạc nữ thần tượng Hàn Quốc–Nhật Bản được thành lập vào ngày 31 tháng 8 năm 2018 bởi công ty CJ E&M và hiện tại cũng có rất nhiều album nổi tiếng: <br>
+            1.FIESTA(2/2020)
+            <br>
+            2.Panorama(12/2020)
+            <br>
+            3.비올레타 (Violeta)(4/2019)
+          </p></div>
+          <div><img width="250" height="250" src="images/bigbang.jpg" >
+          <p>BIGBANG <br>
+            Là một nhóm nhạc nam Hàn Quốc được thành lập bởi YG Entertainment. Nhóm bao gồm 4 thành viên G-Dragon, T.O.P, Taeyang và Daesung, sau khi Seungri giải nghệ năm 2019. <br>
+            1.뱅뱅뱅 (BANG BANG BANG)
+            <br>
+            2.Panorama(12/2020)
+            <br>
+            3.비올레타 (Violeta)(4/2019)
+          </p>
+          </div>
+        </h1>
+        
+      </div>
+    </section>
+    <div class="footer">
+     <div>
+        <ul class="stop">
+      <li>Kết nối với chúng tôi <div> <a href=""><img width="50" height="50" src="images/icons8-facebook-64.png"  alt=""></a></div> </li>
+      <li>Tải ứng dụng <div><a href=""><img  width="50" height="50" src="images/icons8-qr-code-48.png" alt=""></a></div></li>
+      <li > Liên kết  <div><ul class="nono">
+        <li><a href=""> Lyrics.com</a> </li>
+        <li><a href="">Netword.com</a> </li>  
+        <li><a href="">Nhaccuatui.com</a> </li>
+      </ul></div></li>
+      
+       </ul>
+     </div>
+      <div>
+        <p>Trường đại học Mở TPHCM - Địa chỉ: 371 Nguyễn Kiệm quận Gò Vấp thành phố Hồ Chí Minh</p>
+
+         <p> Email: sieucapvippro@gmail.com.vn -Người quản lí thông tí : Nguyễn Thiện Lạc</p>
+          
+        <p>Được thành lập và đưa vào sử dụng từ ngày 27/07/2002</p>
+       
+       
+      </div>
+    </div>
+    <script> 
+    // khung 1
+        var previous=document.getElementById('pre');
+        var play=document.getElementById('play');
+       var next=document.getElementById('next');
+        var index_no=0;
+        var playing_song=false;// khai báo mặc định là nhạc chưa chạy là false
+        //tạo 1 element audio
+          var track=document.createElement('audio');
+          // tạo mảng 
+          var All_song=[ {path:"music/rise.mp3" },  {path:"music/mangchung.mp3" }, {path:"music/muonroimasaocon.mp3" },  { path:"music/stay.mp3"  } ];
+  
+          // all function
+  
+          // function track
+          function load_track(index_no){
+                  track.src=All_song[index_no].path;//  all_song[index].path là all_song[0].path là load từ vị trí đầu tiên trong mảng có tên thành phần là path
+                  track.load();//lệnh load
+          }
+          load_track(index_no);
+  
+          // check những function đã đặt tên ở những button bên trên
+          function justplay(){
+            if(playing_song==false){ // nếu false nghĩa là nhạc chưa chạy thì playsong() sẽ làm nhạc bắt đầu chạy
+              playsong();
+            }
+            else{
+              pausesong(); // nhạc dừng
+            }
+          }
+          // tên playsong() next_song() previous_song() đã được đặt trước ở bên trên 
+          function playsong(){
+            track.play();
+            playing_song=true;
+            
+          }
+          function pausesong(){
+            track.pause();
+            playing_song=false;
+           
+          }
+          // bài nhạc tiếp theo 
+          function next_song(){
+            if(index_no < All_song.length -1){ // nếu độ dài của biến index nhỏ hơn số nhạc dang có ( đang có là 4 nhưng biến index chạy từ 0 nên .lenght -1)
+              index_no+=1;// sau đó + biến index lên 
+              load_track(index_no);// load bài nhạc tiếp theo là số hiện tại của index ( bài nhạc thứ 1 là index =0 , bài thứ 2 index=1 )
+              playsong();
+            }
+            else{ // ngược lại nếu index > allsong.length
+              index_no=0;// nghĩa là đã vượt quá số trong mảng thì sẽ bắt đầu lại từ bài đầu tiên index=0
+              load_track(index_no);
+              playsong();
+            }
+          }
+          function previous_song(){ // bài nhạc trước đó 
+            if(index_no>0){   
+              index_no-=1; //nếu index >0 thì index hiện tại trừ di 1 
+              load_track(index_no);
+              playsong();
+            }
+            else{ // nếu index <= 0 
+              index_no=All_song.length;
+              load_track(index_no);
+              playsong();
+            }
+          }
+          //khung 2
+          var previous2=document.getElementById('pre2');
+            var play2=document.getElementById('play2');
+           var next2=document.getElementById('next2');
+            var index_no2=0;
+            var playing_song2=false;
+            var track2=document.createElement('audio');
+            var All_song2=[ {path:"music/loveisgone.mp3" },  {path:"music/lalala.mp3" }, {path:"music/muonroimasaocon.mp3" },  { path:"music/stay.mp3"  } ];
+      function load_track2(index_no2){
+              track2.src=All_song2[index_no2].path;
+              track2.load();
+      }
+      load_track2(index_no2);
+      function justplay2(){
+        if(playing_song2==false){ 
+          playsong2();
+        }
+        else{
+          pausesong2(); 
+        }
+      }
+      function playsong2(){
+        track2.play();
+        playing_song2=true;
+      }
+      function pausesong2(){
+        track2.pause();
+        playing_song2=false;    }
+      function next_song2(){
+        if(index_no2 < All_song2.length -1){ 
+          index_no2+=1;
+          load_track2(index_no2);
+          playsong2();
+        }
+        else{ 
+          index_no2=0;
+          load_track2(index_no2);
+          playsong2();
+        }
+      }
+      function previous_song2(){ 
+        if(index_no2>0){   
+          index_no2-=1; 
+          load_track2(index_no2);
+          playsong2();
+        }
+        else{
+          index_no2=All_song2.length;
+          load_track2(index_no2);
+          playsong2();
+        }
+      }
+      //khung 3
+      var previous3=document.getElementById('pre3');
+            var play3=document.getElementById('play3');
+           var next3=document.getElementById('next3');
+            var index_no3=0;
+            var playing_song3=false;
+            var track3=document.createElement('audio');
+            var All_song3=[ {path:"music/howyoulikethat.mp3" },  {path:"music/lalala.mp3" }, {path:"music/muonroimasaocon.mp3" },  { path:"music/stay.mp3"  } ];
+      function load_track3(index_no3){
+              track3.src=All_song3[index_no3].path;
+              track3.load();
+      }
+      load_track3(index_no3);
+      function justplay3(){
+        if(playing_song3==false){ 
+          playsong3();
+        }
+        else{
+          pausesong3(); 
+        }
+      }
+      function playsong3(){
+        track3.play();
+        playing_song3=true;
+      }
+      function pausesong3(){
+        track3.pause();
+        playing_song3=false;    }
+      function next_song3(){
+        if(index_no3 < All_song3.length -1){ 
+          index_no3+=1;
+          load_track3(index_no3);
+          playsong3();
+        }
+        else{ 
+          index_no3=0;
+          load_track3(index_no3);
+          playsong3();
+        }
+      }
+      function previous_song3(){ 
+        if(index_no3>0){   
+          index_no3-=1; 
+          load_track3(index_no3);
+          playsong3();
+        }
+        else{
+          index_no3=All_song3.length;
+          load_track3(index_no3);
+          playsong3();
+        }
+      }
+      //khung 4
+      var previous4=document.getElementById('pre4');
+            var play4=document.getElementById('play4');
+           var next4=document.getElementById('next4');
+            var index_no4=0;
+            var playing_song4=false;
+            var track4=document.createElement('audio');
+            var All_song4=[ {path:"music/immortals.mp3" },  {path:"music/lalala.mp3" }, {path:"music/muonroimasaocon.mp3" },  { path:"music/stay.mp3"  } ];
+      function load_track4(index_no4){
+              track4.src=All_song4[index_no4].path;
+              track4.load();
+      }
+      load_track4(index_no4);
+      function justplay4(){
+        if(playing_song4==false){ 
+          playsong4();
+        }
+        else{
+          pausesong4(); 
+        }
+      }
+      function playsong4(){
+        track4.play();
+        playing_song4=true;
+      }
+      function pausesong4(){
+        track4.pause();
+        playing_song4=false;    }
+      function next_song4(){
+        if(index_no4 < All_song4.length -1){ 
+          index_no4+=1;
+          load_track4(index_no4);
+          playsong4();
+        }
+        else{ 
+          index_no4=0;
+          load_track4(index_no4);
+          playsong4();
+        }
+      }
+      function previous_song4(){ 
+        if(index_no4>0){   
+          index_no4-=1; 
+          load_track4(index_no4);
+          playsong4();
+        }
+        else{
+          index_no4=All_song4.length;
+          load_track4(index_no4);
+          playsong4();
+        }
+      }
+      //khung 5
+      var previous5=document.getElementById('pre5');
+            var play5=document.getElementById('play5');
+           var next5=document.getElementById('next5');
+            var index_no5=0;
+            var playing_song5=false;
+            var track5=document.createElement('audio');
+            var All_song5=[ {path:"music/friends.mp3" },  {path:"music/lalala.mp3" }, {path:"music/muonroimasaocon.mp3" },  { path:"music/stay.mp3"  } ];
+      function load_track5(index_no5){
+              track5.src=All_song5[index_no5].path;
+              track5.load();
+      }
+      load_track5(index_no5);
+      function justplay5(){
+        if(playing_song5==false){ 
+          playsong5();
+        }
+        else{
+          pausesong5(); 
+        }
+      }
+      function playsong5(){
+        track5.play();
+        playing_song5=true;
+      }
+      function pausesong5(){
+        track5.pause();
+        playing_song5=false;    }
+      function next_song5(){
+        if(index_no5 < All_song5.length -1){ 
+          index_no5+=1;
+          load_track5(index_no5);
+          playsong5();
+        }
+        else{ 
+          index_no5=0;
+          load_track5(index_no5);
+          playsong5();
+        }
+      }
+      function previous_song5(){ 
+        if(index_no5>0){   
+          index_no5-=1; 
+          load_track5(index_no5);
+          playsong5();
+        }
+        else{
+          index_no5=All_song5.length;
+          load_track5(index_no5);
+          playsong5();
+        }
+      }
+      //khung 6
+      var previous6=document.getElementById('pre6');
+            var play6=document.getElementById('play6');
+           var next6=document.getElementById('next6');
+            var index_no6=0;
+            var playing_song6=false;
+            var track6=document.createElement('audio');
+            var All_song6=[ {path:"music/peaches.mp3" },  {path:"music/lalala.mp3" }, {path:"music/muonroimasaocon.mp3" },  { path:"music/stay.mp3"  } ];
+      function load_track6(index_no6){
+              track6.src=All_song6[index_no6].path;
+              track6.load();
+      }
+      load_track6(index_no6);
+      function justplay6(){
+        if(playing_song6==false){ 
+          playsong6();
+        }
+        else{
+          pausesong6(); 
+        }
+      }
+      function playsong6(){
+        track6.play();
+        playing_song6=true;
+      }
+      function pausesong6(){
+        track6.pause();
+        playing_song6=false;    }
+      function next_song6(){
+        if(index_no6 < All_song6.length -1){ 
+          index_no6+=1;
+          load_track6(index_no6);
+          playsong6();
+        }
+        else{ 
+          index_no6=0;
+          load_track6(index_no6);
+          playsong6();
+        }
+      }
+      function previous_song6(){ 
+        if(index_no6>0){   
+          index_no6-=1; 
+          load_track6(index_no6);
+          playsong6();
+        }
+        else{
+          index_no6=All_song6.length;
+          load_track6(index_no6);
+          playsong6();
+        }
+      }
+      // khung 7
+      var previous7=document.getElementById('pre7');
+            var play7=document.getElementById('play7');
+           var next7=document.getElementById('next7');
+            var index_no7=0;
+            var playing_song7=false;
+            var track7=document.createElement('audio');
+            var All_song7=[ {path:"music/peaches.mp3" },  {path:"music/lalala.mp3" }, {path:"music/muonroimasaocon.mp3" },  { path:"music/stay.mp3"  } ];
+      function load_track7(index_no7){
+              track7.src=All_song7[index_no7].path;
+              track7.load();
+      }
+      load_track7(index_no7);
+      function justplay7(){
+        if(playing_song7==false){ 
+          playsong7();
+        }
+        else{
+          pausesong7(); 
+        }
+      }
+      function playsong7(){
+        track7.play();
+        playing_song7=true;
+      }
+      function pausesong7(){
+        track7.pause();
+        playing_song7=false;    }
+      function next_song7(){
+        if(index_no7 < All_song7.length -1){ 
+          index_no7+=1;
+          load_track7(index_no7);
+          playsong7();
+        }
+        else{ 
+          index_no7=0;
+          load_track7(index_no7);
+          playsong7();
+        }
+      }
+      function previous_song7(){ 
+        if(index_no7>0){   
+          index_no7-=1; 
+          load_track7(index_no7);
+          playsong7();
+        }
+        else{
+          index_no7=All_song7.length;
+          load_track7(index_no7);
+          playsong7();
+        }
+      }
+        // khung 8
+        var previous8=document.getElementById('pre8');
+            var play8=document.getElementById('play8');
+           var next8=document.getElementById('next8');
+            var index_no8=0;
+            var playing_song8=false;
+            var track8=document.createElement('audio');
+            var All_song8=[ {path:"music/peaches.mp3" },  {path:"music/lalala.mp3" }, {path:"music/muonroimasaocon.mp3" },  { path:"music/stay.mp3"  } ];
+      function load_track8(index_no8){
+              track8.src=All_song8[index_no8].path;
+              track8.load();
+      }
+      load_track8(index_no8);
+      function justplay8(){
+        if(playing_song8==false){ 
+          playsong8();
+        }
+        else{
+          pausesong8(); 
+        }
+      }
+      function playsong8(){
+        track8.play();
+        playing_song8=true;
+      }
+      function pausesong8(){
+        track8.pause();
+        playing_song8=false;    }
+      function next_song8(){
+        if(index_no8 < All_song8.length -1){ 
+          index_no8+=1;
+          load_track8(index_no8);
+          playsong8();
+        }
+        else{ 
+          index_no8=0;
+          load_track8(index_no8);
+          playsong8();
+        }
+      }
+      function previous_song8(){ 
+        if(index_no8>0){   
+          index_no8-=1; 
+          load_track8(index_no8);
+          playsong8();
+        }
+        else{
+          index_no8=All_song8.length;
+          load_track8(index_no8);
+          playsong8();
+        }
+      }
+      </script>
+   
+    </body>
+</html> 

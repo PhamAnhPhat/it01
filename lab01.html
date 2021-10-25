@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+    <head><title>LAB01</title></head>
+    <script src="jquery-3.6.0.min.js"></script>
+    <link  href="">
+    <style>
+       * {
+        font-family: cursive;
+    box-sizing: border-box;
+}
+
+nav > ul.menu {
+    display: flex;
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #CC3300;
+    
+}
+
+nav > ul.menu > li {
+    width: 16.69%;
+    text-align: center;
+    position: relative;
+}
+/*div.btn i{
+     margin-top: 8px;
+ }*/
+ul.menu > li > a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    border-right: 1px solid white;
+    padding: 15px 0;
+}
+
+ul.menu > li > a:hover {
+    background-color: #e9815e;
+}
+
+ul.menu > li > a span {
+    display: block;
+}
+
+header {
+    background: linear-gradient( #e9815e, #CC3300);
+    margin-top: 5px;
+}
+
+div.header {
+    display:flex;
+    align-items: center;
+}
+
+div.header h1 {
+    color:white;
+    font-size: 50px;
+    text-shadow: 3px 4px 3px darkblue;
+}
+
+div.header > div:nth-child(1) {
+    width: 10%;
+}
+
+div.header > div:nth-child(2) {
+    width: 70%;
+}
+
+div.header > div:nth-child(3) {
+    width: 20%;
+}
+
+input {
+    padding: 10px;
+}
+
+input[type=text] {
+    width: 60%;
+}
+
+.subcontent {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+.subcontent::after {
+    content: " ";
+    border-width: 15px;
+    border-color: transparent transparent #CC3300 transparent;
+    border-style: solid;
+    position: absolute;
+    top: -30px;
+    left: 45%; 
+}
+
+.sub:hover .subcontent {
+    display: block;
+}
+
+section.course {
+    width: 80%;
+    margin: 5px auto;
+}
+
+div.item {
+    width: 25%;
+    padding: 5px;
+    position: relative;
+}
+
+div.detail {
+    position: absolute;
+    top: 0;
+    /* left: 0;
+    right: 0; */
+    bottom: 0;
+    color: white;
+    font-size: 20px;
+    padding: 0;
+    padding-top: 30%;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 0;
+    overflow: hidden;
+    transition: width .25s;
+    /* display: none; */
+}
+
+div.item:hover div.detail {
+    /* display: block; */
+    padding: 30px;
+    width: 100%;
+}
+
+div.item-content {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(tomato, orange);
+}
+
+div.item h1 {
+    color: white;
+    background: linear-gradient(blue, lightblue);
+    padding: 10px;
+    margin: 0;
+}
+
+div.item img {
+    width: 80%;
+}
+
+input[type=button] {
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+   
+}
+
+div.items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.social {
+    background-color: transparent !important;
+    position: fixed;
+}
+
+ul.social li a {
+    padding: 0 !important;
+    transition: transform 0.5s;
+}
+
+ul.social li a:hover {
+    background-color: transparent !important;
+    transform: scale(1.1);
+}
+
+footer {
+    background: linear-gradient(orange, white);
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+div.my-footer {
+    display: flex;
+    padding: 10px;
+}
+
+div.my-footer > div {
+    width: 33.33%;
+}
+    </style>
+    <script>
+     /*   function search(){
+            var d=document.getElementById("kw").value
+            if(d!=null)
+            d=d.value
+            var items =document.querySelectorAll("div.item")
+            for(var i=0;i<items.length;i++){
+                var text=items[i].getElementsByTagName("h1")[0].innerText// tìm từng cái item h1
+                if(text.toLowerCase().indexOf(d) >=0)
+                items[i].style.outline="20px dashed red"
+            }
+        }*/
+$(document).ready(function(){
+    $("#btnSearch").click(function(){
+        var d=$("kw").val();
+        $(`div.item h1:contains(${d})`).parent().css("outline","5px dashed red")
+    })
+})
+    </script>
+   <body>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">
+                <img src="lab01/home.png" alt="home" />
+                <span>Trang chu</span>
+            </a></li>
+            <li><a href="#">
+                <img src="lab01/news.png" alt="home" />
+                <span>Tin tuc</span>
+            </a></li>
+            <li  class="sub">
+                <a href="#">
+                    <img src="lab01/forum.png" alt="home" />
+                    <span>Dien dan</span>
+                </a>
+
+                <ul class="menu subcontent">
+                    <li><a href="#">Thao luan cong nghe</a></li>
+                    <li><a href="#">Thao luan ngon ngu lap trinh</a></li>
+                </ul>
+            </li>
+            <li class="sub">
+                <a href="#">
+                    <img src="lab01/programming.png" alt="home" />
+                    <span>Lap trinh</span>
+                </a>
+
+                <ul class="menu subcontent">
+                    <li><a href="#">Lap trinh C++</a></li>
+                    <li><a href="#">Lap trinh Java</a></li>
+                    <li><a href="#">Lap trinh Python</a></li>
+                    <li><a href="#">Lap trinh PHP</a></li>
+                    <li><a href="#">Lap trinh Ruby</a></li>
+                </ul>
+            </li>
+            <li><a href="#">
+                <img src="lab01/theater.png" alt="home" />
+                <span>Giai tri</span>
+            </a></li>
+            <li><a href="#">
+                <img src="lab01/contact.png" alt="home" />
+                <span>Lien he</span>
+            </a></li>
+        </ul>    
+    </nav>
+
+    <header>
+       <div class="header">
+            <div><img src="lab01/computer.png" alt="subject" /></div> 
+            <div>
+                <h1>TIN HOC VA DOI SONG</h1>
+            </div>
+            <div>
+                <input type="text" id="kw" placeholder="Nhap tu khoa..." />
+                <input type="button"  value="Tim kiem" onclick="btnSearch()"/>
+            </div>
+       </div>
+      
+    </header>
+
+    <section class="social-network">
+        <ul class="menu social">
+            <li><a href="#">
+                <img src="lab01/facebook.png" alt="fb" />
+            </a></li>
+            <li><a href="#">
+                <img src="lab01/twitter.png" alt="fb" />
+            </a></li>
+            <li><a href="#">
+                <img src="lab01/googleplus.png" alt="fb" />
+            </a></li>
+            <li><a href="#">
+                <img src="lab01/linkin.png" alt="fb" />
+            </a></li>
+        </ul>
+    </section>
+
+    <section class="course">
+        <div class="items">
+            <div class="item">
+                <div>
+                   <h1>LAP TRINH C++</h1> 
+                   <div class="item-content">
+                       <div><img src="lab01/cpp.png" alt="C++" /></div>
+                       <div>
+                           <input type="button" value="Dat lich hoc" />
+                       </div>
+                   </div>
+                </div>
+
+                <div class="detail">
+                    <p>Mon nay huong dan hoc lap trinh C++ cho nguoi moi bat dau</p>
+                    <ul>
+                        <li>C1. Gioi thieu</li>
+                        <li>C2. Bien</li>
+                        <li>C1. Cau truc dieu khien</li>
+                        <li>C1. Cac lenh nang cao</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                   <h1>hello</h1> 
+                   <div class="item-content">
+                       <div><img src="lab01/cpp.png" alt="C++" /></div>
+                       <div>
+                           <input type="button" value="Dat lich hoc" />
+                       </div>
+                   </div>
+                </div>
+                <div class="detail">
+                    <p>Mon nay huong dan hoc lap trinh C++ cho nguoi moi bat dau</p>
+                    <ul>
+                        <li>C1. Gioi thieu</li>
+                        <li>C2. Bien</li>
+                        <li>C1. Cau truc dieu khien</li>
+                        <li>C1. Cac lenh nang cao</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                   <h1>LAP TRINH C++</h1> 
+                   <div class="item-content">
+                       <div><img src="lab01/cpp.png" alt="C++" /></div>
+                       <div>
+                           <input type="button" value="Dat lich hoc" />
+                       </div>
+                   </div>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                   <h1>LAP TRINH C++</h1> 
+                   <div class="item-content">
+                       <div><img src="lab01/cpp.png" alt="C++" /></div>
+                       <div>
+                           <input type="button" value="Dat lich hoc" />
+                       </div>
+                   </div>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                   <h1>LAP TRINH C++</h1> 
+                   <div class="item-content">
+                       <div><img src="lab01/cpp.png" alt="C++" /></div>
+                       <div>
+                           <input type="button" value="Dat lich hoc" />
+                       </div>
+                   </div>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                   <h1>LAP TRINH C++</h1> 
+                   <div class="item-content">
+                       <div><img src="lab01/cpp.png" alt="C++" /></div>
+                       <div>
+                           <input type="button" value="Dat lich hoc" />
+                       </div>
+                   </div>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                   <h1>LAP TRINH C++</h1> 
+                   <div class="item-content">
+                       <div><img src="lab01/cpp.png" alt="C++" /></div>
+                       <div>
+                           <input type="button" value="Dat lich hoc" />
+                       </div>
+                   </div>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                   <h1>LAP TRINH C++</h1> 
+                   <div class="item-content">
+                       <div><img src="lab01/cpp.png" alt="C++" /></div>
+                       <div>
+                           <input type="button" value="Dat lich hoc" />
+                       </div>
+                   </div>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                   <h1>LAP TRINH C++</h1> 
+                   <div class="item-content">
+                       <div><img src="lab01/cpp.png" alt="C++" /></div>
+                       <div>
+                           <input type="button" value="Dat lich hoc" />
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <footer>
+       <div class="my-footer">
+           <div>
+                <p>DHT &copy; 2021</p>
+               <ul>
+                   <li>Nguyen Van A</li>
+                   <li>34-35 HHH, Q1, HCMC</li>
+                   <li>
+                       <a href="mailto:a@gmail.com">a@gmail.com</a>
+                   </li>
+               </ul>
+           </div>
+           <div>
+               <p>Nhap email de theo doi thong bao</p>
+               <div>
+                    <input type="text" placeholder="Nhap email..." />
+                    <input type="button" value="Theo doi" />
+               </div>
+           </div>
+           <div>
+                <p>DANH MUC</p>
+                <ul>
+                    <li><a href="#">Lap trinh C++</a></li>
+                    <li><a href="#">Lap trinh Java</a></li>
+                    <li><a href="#">Lap trinh Python</a></li>
+                    <li><a href="#">Lap trinh PHP</a></li>
+                    <li><a href="#">Lap trinh Ruby</a></li>
+                </ul>
+           </div>
+       </div>
+    </footer>
+</body>
+</html>

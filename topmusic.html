@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Top Music</title>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <script src="jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+           $(window).scroll(function(){
+            if($(this).scrollTop()>=200)
+               $("#gototop").fadeIn("slow")
+            else
+               $("#gototop").fadeOut("slow")
+           })
+
+           $("#gototop").click(function() {
+             $("html, body").animate({
+                 scrollTop:0
+             },1000);
+           })  
+       })
+     
+        </script>
+    </head>
+
+
+    <style>
+     
+  body{
+      
+      background-image: linear-gradient(-45deg, #FEBCC8,#FFFFD8,black,#E0FEFE,#D3EEFF);
+    background-size: 300% 300%;
+  animation: doimau 10s ease infinite;
+            font-family: sans-serif;
+     
+  }
+  @keyframes doimau {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+    *{
+        text-decoration: none;
+        list-style: none;
+        margin: 0px ;
+        padding: 0px;
+        box-sizing: border-box;
+       
+    }
+    #header{
+      background:#abd1c6;
+      font-family: sans-serif;
+      font-size: 19px;
+      display: flex;
+      justify-content: space-between;
+      line-height: 5em;
+      height: 5em;
+   }
+   .logo{
+       font-size: 20px;
+       padding-left: 30px;
+       margin-top: 20px;
+       float: right;
+       
+   }
+   
+   .find{
+       position:absolute;
+       left : 180px ;
+       top : 10px;
+       
+   }
+
+   .menu{
+       display: flex;
+   }
+   .menu li{
+       padding-right: 60px;
+   }
+   .menu li a:hover{
+       color:tomato;
+       transition: 1s;
+   }
+  
+
+   .round{
+    border-radius: 15px;
+    padding: 10px;  
+    width: 225px;
+   }
+ .right{
+    margin-right: 5px;
+    width: 25%;
+    height: auto;
+    background-image: linear-gradient(-45deg, #FEBCC8,#FFFFD8,black,#E0FEFE,#D3EEFF);
+    background-size: 400% 400%;
+  animation: doimau 10s ease infinite;
+    position: fixed;
+    bottom: 102px;
+    right: 0px;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 15px;
+ }
+div.info1{
+    color: #fff;
+    
+    flex:1;
+}
+ div.main{
+     margin-left: 10%;
+ }
+ p{
+    font-size: 20px;
+    margin: 5px 0 10px ;
+ }
+ div.btn{
+     margin-top: 20px;
+    
+    align-content: center;
+    display: block;
+ }
+ 
+ div.btn>img{
+     width: 30px;
+     margin-right: 20px;
+     cursor: pointer;
+ } 
+ div.listen{
+    width: 70%;
+   display: flex;
+    margin:15px;
+    box-sizing: border-box;
+    overflow: hidden; 
+    border: solid 2px;
+    border-radius: 20px 20px 20px 20px;
+    
+ }
+ a#gototop{
+     text-decoration: none;
+     display: block;
+     padding: 9px 30px;
+     position: fixed;
+     bottom: 10px;
+   right: 0px;
+     z-index: 99999;
+ }
+  div.right>p{
+      text-align: center;
+  }
+ div.content{
+     display: flex;
+     margin-bottom: 5px;
+     margin-left: 5px;
+     box-sizing: border-box;
+    
+ }
+ div.listen >img{
+     border-radius: 50%;
+     height: 178.2px;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+ }
+ 
+ div.listen>img:hover{
+    animation: xoayvong 5s linear 0s infinite;
+ }
+
+ div.content div.but>img{
+     width: 30px;
+     height: 30px;
+ }
+ div.left{
+    margin-right: 5px;
+    width: 300px;
+    height: 427px;
+    position: fixed;
+    bottom: 102px;
+    left: 0px;
+
+ }
+ 
+ @keyframes xoayvong {
+    from{
+        transform:rotate(0deg);
+        
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.listen:hover img{
+    transform:scale(1.05)
+}
+div.left img:hover{
+      transform: scale(1.1);
+}
+footer{
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+.foot{
+    display: flex;
+}
+.foot>div:nth-child(1){
+ margin: 7px;
+    width: 50%;
+}
+.foot>div:nth-child(2){
+   
+    width: 20%;
+}
+.foot>div:nth-child(3){
+   
+    width: 20%;
+}
+
+    </style>
+   <body>
+       <div class="left">
+        <div><a href="https://www.facebook.com/pham.a.phat"><img src="lab01/facebook.png" alt=""></a></div>
+        <div><a href="#"><img src="lab01/twitter.png" alt=""></a></div>
+        <div><a href="#"><img src="lab01/googleplus.png" alt=""></a></div>
+        <div><a href="#"><img src="lab01/linkin.png" alt=""></a></div>
+       </div>
+       <div>
+           <a id="gototop"  href="javascript:;"><img src="images/icons8-send-letter-50.png" width="50px" alt="Go To Top"></a>
+       </div>
+      <div class="right"> <p> Top Music US-UK </p>
+        <div class="content">
+            <img src ="images/call.jpg" width="150px"  >
+                 
+                  <div class="thongtin">
+                            <h3>Calling my phone-Lil Tjay</h3>
+                           <div class="but"><img src="images/icons8-play-50.png" id="icon1"  ></div> 
+                  </div>
+                  <audio id="nhac1">
+                    <source src="music/callingmyphone.mp3" type="audio/mp3">
+                </audio>
+                
+                <script> 
+                    var song1=document.getElementById("nhac1");
+                    var icon1=document.getElementById("icon1");
+                    icon1.onclick=function(){
+                       if(song1.paused ){
+                           song1.play();
+                           icon1.src="images/icons8-pause-50.png";
+                       }
+                       else{
+                        song1.pause();
+                           icon1.src="images/icons8-play-50.png";
+                       }
+                    }      
+                    </script>
+         </div>
+        
+
+         <div class="content">
+            <img src ="images/inferno.jpg" width="150px" >
+                 
+                  <div class="thongtin">
+                            <h3>Inferno-Sub Urban & Bella Poarch</h3>
+                           <div class="but"><img src="images/icons8-play-50.png" id="icon2"  ></div> 
+                  </div>
+                  <audio id="nhac2">
+                    <source src="music/inferno.mp3" type="audio/mp3">
+                </audio>
+                
+                <script> 
+                    var song2=document.getElementById("nhac2");
+                    var icon2=document.getElementById("icon2");
+                    icon2.onclick=function(){
+                       if(song2.paused ){
+                           song2.play();
+                           icon2.src="images/icons8-pause-50.png";
+                       }
+                       else{
+                        song2.pause();
+                           icon2.src="images/icons8-play-50.png";
+                       }
+                    }      
+                    </script>
+         </div>
+
+         <div class="content">
+            <img src ="images/lala.jpg" width="150px" >
+                 
+                  <div class="thongtin">
+                            <h3>La la la-Naughty Boy, Sam Smith</h3>
+                           <div class="but"><img src="images/icons8-play-50.png" id="icon3"  ></div> 
+                  </div>
+                  <audio id="nhac3">
+                    <source src="music/lalala.mp3" type="audio/mp3">
+                </audio>
+                
+                <script> 
+                    var song3=document.getElementById("nhac3");
+                    var icon3=document.getElementById("icon3");
+                    icon3.onclick=function(){
+                       if(song3.paused ){
+                           song3.play();
+                           icon3.src="images/icons8-pause-50.png";
+                       }
+                       else{
+                        song3.pause();
+                           icon3.src="images/icons8-play-50.png";
+                       }
+                    }      
+                    </script>
+         </div>
+
+         <div class="content">
+            <img src ="images/peaches.jpg" width="150px" >
+                 
+                  <div class="thongtin">
+                            <h3>Peaches-Justin Bieber  </h3>
+                           <div class="but"><img src="images/icons8-play-50.png" id="icon4"  ></div> 
+                  </div>
+                  <audio id="nhac4">
+                    <source src="music/peaches.mp3" type="audio/mp3">
+                </audio>
+                
+                <script> 
+                    var song4=document.getElementById("nhac4");
+                    var icon4=document.getElementById("icon4");
+                    icon4.onclick=function(){
+                       if(song4.paused ){
+                           song4.play();
+                           icon4.src="images/icons8-pause-50.png";
+                       }
+                       else{
+                        song4.pause();
+                           icon4.src="images/icons8-play-50.png";
+                       }
+                    }      
+                    </script>
+         </div>
+        
+         <div class="content">
+            <img src ="images/doubtake.jpg" width="150px" >
+                 
+                  <div class="thongtin">
+                            <h3>Double Take-dhruv </h3>
+                           <div class="but"><img src="images/icons8-play-50.png" id="icon5"  ></div> 
+                  </div>
+                  <audio id="nhac5">
+                    <source src="music/doubletake.mp3" type="audio/mp3">
+                </audio>
+                
+                <script> 
+                    var song5=document.getElementById("nhac5");
+                    var icon5=document.getElementById("icon5");
+                    icon5.onclick=function(){
+                       if(song5.paused ){
+                           song5.play();
+                           icon5.src="images/icons8-pause-50.png";
+                       }
+                       else{
+                        song5.pause();
+                           icon5.src="images/icons8-play-50.png";
+                       }
+                    }      
+                    </script>
+         </div>
+     </div>
+    <div id="header">
+       <a href="#" class="logo"><img src="logo.png"width="140px"height="100px"> </a>       
+       <a href="#" class="find"><input type = "text" placeholder="Search your music here..." class="round"></a>
+        <nav >
+             <ul class="menu">
+           <li><a href="home.html">Home</a></li>
+           <li><a href="topmusic.html">Top music</a></li>
+           <li >
+               <a href="product.html">Product</a>
+            </li>
+           <li><a href="about us.html">About us</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class = "main">
+        <div class="listen ">
+            <img src ="images/noinaycoanh.png" width="175px">
+            <div class="info1">
+                <h1>Nơi này có anh</h1>
+                <p>Sơn Tùng MTP</p>
+                <div id="waveform"></div>
+                <div class="btn">
+                   <img src="images/icons8-play-30.png" id="btn-play" >
+                    <img src="images/icons8-pause-50.png" id="btn-pause">
+                   <img src="images/icons8-volume-64.png" id="btn-volume"/> 
+                </div>
+            </div>
+        </div>
+    
+        <div class="listen ">
+            <img src ="images/haytraochoanh.png" width="175px">
+            <div class="info1">
+                <h1>Hãy trao cho anh</h1>
+                <p>Sơn Tùng MTP</p>
+                <div id="waveform2"></div>
+                <div class="btn">
+                    <img src="images/icons8-play-30.png" id="btn-play2" >
+                    <img src="images/icons8-pause-50.png" id="btn-pause2"> 
+                    <img src="images/icons8-volume-64.png" id="btn-volume2"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="listen ">
+            <img src ="images/muonroimasaocon.png" width="175px">
+            <div class="info1">
+                <h1>Muộn rồi mà sao còn</h1>
+                <p>Sơn Tùng MTP</p>
+                <div id="waveform3"></div>
+                <div class="btn">
+                    <img src="images/icons8-play-30.png" id="btn-play3" >
+                    <img src="images/icons8-pause-50.png" id="btn-pause3"> <img src="images/icons8-volume-64.png" id="btn-volume3"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="listen">
+            <img src ="images/loveisgone.png" width="175px">
+            <div class="info1">
+                <h1>Love is gone</h1>
+                <p>SLANDER ft. Dylan Matthew</p>
+                <div id="waveform4"></div>
+                <div class="btn">
+                    <img src="images/icons8-play-30.png" id="btn-play4" >
+                    <img src="images/icons8-pause-50.png" id="btn-pause4">
+                    <img src="images/icons8-volume-64.png" id="btn-volume4"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="listen">
+            <img src ="images/stay.png" width="175px">
+            <div class="info1">
+                <h1>STAY</h1>
+                <p>The Kid LAROI, Justin Bieber</p>
+                <div id="waveform5"></div>
+                <div class="btn">
+                    <img src="images/icons8-play-30.png" id="btn-play5" >
+                    <img src="images/icons8-pause-50.png" id="btn-pause5">
+                    <img src="images/icons8-volume-64.png" id="btn-volume5"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="listen ">
+            <img src ="images/howyoulikethat.png" width="175px">
+            <div class="info1">
+                <h1>How You Like That</h1>
+                <p>Black Pink</p>
+                <div id="waveform6"></div>
+                <div class="btn">
+                    <img src="images/icons8-play-30.png" id="btn-play6" >
+                    <img src="images/icons8-pause-50.png" id="btn-pause6">
+                    <img src="images/icons8-volume-64.png" id="btn-volume6"/>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="listen ">
+            <img src ="images/rise.png" width="175px">
+            <div class="info1">
+                <h1>Rise</h1>
+                <p>ft. The Glitch Mob, Mako, and The Word Alive</p>
+                <div id="waveform7"></div>
+                <div class="btn">
+                    <img src="images/icons8-play-30.png" id="btn-play7" >
+                    <img src="images/icons8-pause-50.png" id="btn-pause7">
+                    <img src="images/icons8-volume-64.png" id="btn-volume7"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="listen">
+            <img src ="images/mangchung.png" width="175px">
+            <div class="info1">
+                <h1>Mang Chủng</h1>
+                <p> Âm Khuyết Thi Thính</p>
+                <div id="waveform8"></div>
+                <div class="btn">
+                    <img src="images/icons8-play-30.png" id="btn-play8" >
+                    <img src="images/icons8-pause-50.png" id="btn-pause8">
+                    <img src="images/icons8-volume-64.png" id="btn-volume8"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="listen">
+            <img src ="images/badliar.png" width="175px">
+            <div class="info1">
+                <h1>Bad Liar</h1>
+                <p> Imagine Dragons </p>
+                <div id="waveform9"></div>
+                <div class="btn">
+                    <img src="images/icons8-play-30.png" id="btn-play9" >
+                    <img src="images/icons8-pause-50.png" id="btn-pause9">
+                    <img src="images/icons8-volume-64.png" id="btn-volume9"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="listen">
+            <img src ="images/friends.png" width="175px" >
+            <div class="info1">
+                <h1>Friends</h1>
+                <p> Marshmello & Anne-Marie </p>
+                <div id="waveform10"></div>
+                <div class="btn">
+                    <img src="images/icons8-play-30.png" id="btn-play10" >
+                    <img src="images/icons8-pause-50.png" id="btn-pause10">
+                    <img src="images/icons8-volume-64.png" id="btn-volume10"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<footer class="foot">
+    <div class="child1">
+    <div>Trường đại học Mở TPHCM - Địa chỉ: 371 Nguyễn Kiệm quận Gò Vấp thành phố Hồ Chí Minh</div>
+    <div>Email: sieucapvippro@gmail.com.vn -Người quản lý thông tin : Nguyễn Thiện Lạc</div>
+    <div>Chúc các bạn một ngày nghe nhạc thật vui vẻ</div>
+    </div>
+    <div class="child2">Hãy liên với chúng tôi tại đây
+       <div class="face"> 
+           <img width="50" height="50" src="images/icons8-facebook-64.png" alt="">
+      </div>
+      </div>
+    <div class="child3">Nhà tài trợ
+        <div><a href="#">MuCabang.com</a></div>
+        <div><a href="#">Nupakachi.com</a></div>
+        <div><a href="#">Lyrics.com</a></div>
+    </div>
+</footer>
+   <script>
+        /* bài thứ 1*/
+   var btnplay=document.getElementById("btn-play");
+   var btnpause=document.getElementById("btn-pause");
+   var btnvolume=document.getElementById("btn-volume");
+    var wavesurfer = WaveSurfer.create({
+           container: '#waveform',
+           waveColor: 'white',
+           progressColor: 'gray',
+           height:50,
+           width:70,
+       
+           hideScrollbar:true,
+           barWidth:4
+            });   
+            wavesurfer.load('music/noinaycoanh.mp3') 
+           btnplay.onclick=function(){
+               wavesurfer.play();
+           }
+           btnpause.onclick=function(){
+               wavesurfer.pause();
+        }
+           btnvolume.onclick=function(){
+               wavesurfer.toggleMute();
+           }
+            /* bài thứ 2*/
+    var btnplay2=document.getElementById("btn-play2");
+    var btnpause2=document.getElementById("btn-pause2");
+    var btnvolume2=document.getElementById("btn-volume2");
+    var wavesurfer2 = WaveSurfer.create({
+           container: '#waveform2',
+           waveColor: 'white',
+           progressColor: 'gray',
+           height:50,
+           width:100 ,hideScrollbar:true,
+           barWidth:4
+            });   
+            wavesurfer2.load('music/haytraochoanh.mp3') 
+            btnplay2.onclick=function(){
+                wavesurfer2.play();
+            }  
+            btnpause2.onclick=function(){
+                wavesurfer2.pause();
+            } 
+            btnvolume2.onclick=function(){
+               wavesurfer2.toggleMute();
+           }
+             /* bài thứ 3*/
+    var btnplay3=document.getElementById("btn-play3");
+    var btnpause3=document.getElementById("btn-pause3");
+    var btnvolume3=document.getElementById("btn-volume3");
+    var wavesurfer3 = WaveSurfer.create({
+           container: '#waveform3',
+           waveColor: 'white',
+           progressColor: 'gray',
+           height:50,
+           width:100 ,hideScrollbar:true,
+           barWidth:4
+            });   
+            wavesurfer3.load('music/muonroimasaocon.mp3') 
+            btnplay3.onclick=function(){
+                wavesurfer3.play();
+            }  
+            btnpause3.onclick=function(){
+                wavesurfer3.pause();
+            } 
+            btnvolume3.onclick=function(){
+               wavesurfer3.toggleMute();
+           }
+            /* bài thứ 4*/
+            var btnplay4=document.getElementById("btn-play4");
+    var btnpause4=document.getElementById("btn-pause4");
+    var btnvolume4=document.getElementById("btn-volume4");
+    var wavesurfer4 = WaveSurfer.create({
+           container: '#waveform4',
+           waveColor: 'white',
+           progressColor: 'gray',
+           height:50,
+           width:100,hideScrollbar:true,
+           barWidth:4 
+            });   
+            wavesurfer4.load('music/loveisgone.mp3') 
+            btnplay4.onclick=function(){
+                wavesurfer4.play();
+            }  
+            btnpause4.onclick=function(){
+                wavesurfer4.pause();
+            } 
+            btnvolume4.onclick=function(){
+               wavesurfer4.toggleMute();
+           }
+            /* bài thứ 5*/
+         var btnplay5=document.getElementById("btn-play5");
+    var btnpause5=document.getElementById("btn-pause5");
+    var btnvolume5=document.getElementById("btn-volume5");
+    var wavesurfer5 = WaveSurfer.create({
+           container: '#waveform5',
+           waveColor: 'white',
+           progressColor: 'gray',
+           height:50,
+           width:100,hideScrollbar:true,
+           barWidth:4 
+            });   
+            wavesurfer5.load('music/stay.mp3') 
+            btnplay5.onclick=function(){
+                wavesurfer5.play();
+            }  
+            btnpause5.onclick=function(){
+                wavesurfer5.pause();
+            } 
+            btnvolume5.onclick=function(){
+               wavesurfer5.toggleMute();
+           }
+              /* bài thứ 6*/
+            var btnplay6=document.getElementById("btn-play6");
+    var btnpause6=document.getElementById("btn-pause6");
+    var btnvolume6=document.getElementById("btn-volume6");
+    var wavesurfer6 = WaveSurfer.create({
+           container: '#waveform6',
+           waveColor: 'white',
+           progressColor: 'gray',
+           height:50,
+           width:100,hideScrollbar:true,
+           barWidth:4 
+            });   
+            wavesurfer6.load('music/howyoulikethat.mp3') 
+            btnplay6.onclick=function(){
+                wavesurfer6.play();
+            }  
+            btnpause6.onclick=function(){
+                wavesurfer6.pause();
+            } 
+            btnvolume6.onclick=function(){
+               wavesurfer6.toggleMute();
+           }
+           /* bài thứ 7*/
+           var btnplay7=document.getElementById("btn-play7");
+    var btnpause7=document.getElementById("btn-pause7");
+    var btnvolume7=document.getElementById("btn-volume7");
+    var wavesurfer7 = WaveSurfer.create({
+           container: '#waveform7',
+           waveColor: 'white',
+           progressColor: 'gray',
+           height:50,
+           width:100,hideScrollbar:true,
+           barWidth:4 
+            });   
+            wavesurfer7.load('music/rise.mp3') 
+            btnplay7.onclick=function(){
+                wavesurfer7.play();
+            }  
+            btnpause7.onclick=function(){
+                wavesurfer7.pause();
+            } 
+            btnvolume7.onclick=function(){
+               wavesurfer7.toggleMute();
+           }
+           /*bài thứ 8*/
+           var btnplay8=document.getElementById("btn-play8");
+    var btnpause8=document.getElementById("btn-pause8");
+    var btnvolume8=document.getElementById("btn-volume8");
+    var wavesurfer8 = WaveSurfer.create({
+           container: '#waveform8',
+           waveColor: 'white',
+           progressColor: 'gray',
+           height:50,
+           width:100,hideScrollbar:true,
+           barWidth:4 
+            });   
+            wavesurfer8.load('music/mangchung.mp3') 
+            btnplay8.onclick=function(){
+                wavesurfer8.play();
+            }  
+            btnpause8.onclick=function(){
+                wavesurfer8.pause();
+            } 
+            btnvolume8.onclick=function(){
+               wavesurfer8.toggleMute();
+           }
+        /*bài thứ 9*/  
+        var btnplay9=document.getElementById("btn-play9");
+    var btnpause9=document.getElementById("btn-pause9");
+    var btnvolume9=document.getElementById("btn-volume9");
+    var wavesurfer9 = WaveSurfer.create({
+           container: '#waveform9',
+           waveColor: 'white',
+           progressColor: 'gray',
+           height:50,
+           width:100,hideScrollbar:true,
+           barWidth:4 
+            });   
+            wavesurfer9.load('music/badliar.mp3') 
+            btnplay9.onclick=function(){
+                wavesurfer9.play();
+            }  
+            btnpause9.onclick=function(){
+                wavesurfer9.pause();
+            } 
+            btnvolume9.onclick=function(){
+               wavesurfer9.toggleMute();
+           }
+         /*bài thứ 10*/  
+         var btnplay10=document.getElementById("btn-play10");
+    var btnpause10=document.getElementById("btn-pause10");
+    var btnvolume10=document.getElementById("btn-volume10");
+    var wavesurfer10 = WaveSurfer.create({
+           container: '#waveform10',
+           waveColor: 'white',
+           progressColor: 'gray',
+           height:50,
+           width:100,hideScrollbar:true,
+           barWidth:4 
+            });   
+            wavesurfer10.load('music/friends.mp3') 
+            btnplay10.onclick=function(){
+                wavesurfer10.play();
+            }  
+            btnpause10.onclick=function(){
+                wavesurfer10.pause();
+            } 
+            btnvolume10.onclick=function(){
+               wavesurfer10.toggleMute();
+           }
+           /* TOP MUSIC US-UK*/
+
+   </script>
+    </body>
+</html>
